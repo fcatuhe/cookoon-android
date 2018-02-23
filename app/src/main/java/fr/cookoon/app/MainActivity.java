@@ -13,7 +13,7 @@ import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.crashes.Crashes;
 
 public class MainActivity extends AppCompatActivity implements TurbolinksAdapter {
-    private static final String BASE_URL = "https://cookoon-staging.herokuapp.com";
+    private static final String BASE_URL = BuildConfig.BASE_URL;
     private static final String INTENT_URL = "intentUrl";
 
     private String location;
@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity implements TurbolinksAdapter
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // AppCenter.start(getApplication(), "adc69e19-c5bf-498a-980c-3dd2b7573f79",
-        //                 Analytics.class, Crashes.class);
+        AppCenter.start(getApplication(), "adc69e19-c5bf-498a-980c-3dd2b7573f79",
+                        Analytics.class, Crashes.class);
 
         // Find the custom TurbolinksView object in your layout
         turbolinksView = (TurbolinksView) findViewById(R.id.turbolinks_view);
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements TurbolinksAdapter
         // this for debug builds of your app (it is off by default)
         // TurbolinksSession.getDefault(this).setDebugLoggingEnabled(true);
 
-        TurbolinksSession.getDefault(this).setScreenshotsEnabled(false);
+        // TurbolinksSession.getDefault(this).setScreenshotsEnabled(false);
         TurbolinksSession.getDefault(this).setPullToRefreshEnabled(false);
 
         // For this example we set a default location, unless one is passed in through an intent
