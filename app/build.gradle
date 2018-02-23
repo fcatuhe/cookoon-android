@@ -14,17 +14,17 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            manifestPlaceholders = [appName: "Cookoon", hostName: "app.cookoon.fr"]
+            manifestPlaceholders = [appName: "Cookoon", hostName: "app.cookoon.fr", icLauncher: "ic_launcher"]
             buildConfigField "String", "BASE_URL", "\"https://app.cookoon.fr\""
         }
         staging {
             initWith release
-            manifestPlaceholders = [appName: "Cookoon Staging", hostName: "cookoon-staging.herokuapp.com"]
+            manifestPlaceholders = [appName: "Cookoon Staging", hostName: "cookoon-staging.herokuapp.com", icLauncher: "ic_launcher_staging"]
             buildConfigField "String", "BASE_URL", "\"https://cookoon-staging.herokuapp.com\""
             applicationIdSuffix ".staging"
         }
         debug {
-            manifestPlaceholders = [appName: "Cookoon Debug", hostName: "cookoon-staging.herokuapp.com"]
+            manifestPlaceholders = [appName: "Cookoon Debug", hostName: "cookoon-staging.herokuapp.com", icLauncher: "ic_launcher"]
             buildConfigField "String", "BASE_URL", "\"https://cookoon-staging.herokuapp.com\""
         }
     }
