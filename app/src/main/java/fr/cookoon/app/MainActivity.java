@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements TurbolinksAdapter
         // this for debug builds of your app (it is off by default)
         // TurbolinksSession.getDefault(this).setDebugLoggingEnabled(true);
 
-        // TurbolinksSession.getDefault(this).setScreenshotsEnabled(false);
+        TurbolinksSession.getDefault(this).setScreenshotsEnabled(false);
         TurbolinksSession.getDefault(this).setPullToRefreshEnabled(false);
 
         // For this example we set a default location, unless one is passed in through an intent
