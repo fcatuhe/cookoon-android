@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity implements TurbolinksAdapter
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        AppCenter.start(getApplication(), "adc69e19-c5bf-498a-980c-3dd2b7573f79",
-                        Analytics.class, Crashes.class);
+        // AppCenter.start(getApplication(), "adc69e19-c5bf-498a-980c-3dd2b7573f79",
+        //                 Analytics.class, Crashes.class);
 
         // Find the custom TurbolinksView object in your layout
         turbolinksView = (TurbolinksView) findViewById(R.id.turbolinks_view);
